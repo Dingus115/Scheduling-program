@@ -17,7 +17,7 @@ namespace Final_Capstone_try
         MySqlCommand command;
         MySqlDataReader reader;
         MySqlDataAdapter adapter;
-        public static string selectAll = "Select EIN, FirstName, LastName, SundayIN, SundayOUT, MondayIN, MondayOUT, TuesdayIN, TuesdayOUT, WednesdayIN, WednesdayOUT, ThursdayIN, ThursdayOUT, FridayIN, FridayOUT, SaturdayIN, SaturdayOUT FROM employee";
+        public static string selectAll = "Select EIN, FirstName, LastName, SundayIN, SundayOUT, MondayIN, MondayOUT, TuesdayIN, TuesdayOUT, WednesdayIN, WednesdayOUT, ThursdayIN, ThursdayOUT, FridayIN, FridayOUT, SaturdayIN, SaturdayOUT FROM employee ORDER BY LastName, FirstName";
         public DataTable dtcookout = new DataTable(); //create datatable to pass to database and allow search function
 
         public cookout_editor()
@@ -95,6 +95,8 @@ namespace Final_Capstone_try
             cookout_datagridview.ReadOnly = true;
             cookout_datagridview.RowHeadersVisible = false;
             cookout_datagridview.AllowUserToAddRows = false;
+            theme_combobox.Items.Add("Dark");
+            theme_combobox.Items.Add("Light");
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -104,13 +106,155 @@ namespace Final_Capstone_try
 
             for(int i = 0; i < dtcookout.Rows.Count; i++)
             {
-                /*if (dtcookout.Rows[cookout_datagridview.CurrentCell.ColumnIndex]["FirstName"].Contains(search))
+                if (dtcookout.Rows[i]["FirstName"].ToString() == search)
                 {
                     index = i;
-                }*/
+                }
             }
-
+            cookout_datagridview.ClearSelection();
             cookout_datagridview.Rows[index].Selected = true;
+        }
+
+        private void theme_button_Click(object sender, EventArgs e)
+        {
+            string theme = theme_combobox.Text.ToString();
+
+            if(theme == "Dark")
+            {
+                this.BackColor = Color.FromArgb(70, 70, 70);
+                in_label.ForeColor = Color.White;
+                out_label.ForeColor = Color.White;
+
+                sunday_label.ForeColor = Color.White;
+                sundayin_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                sundayin_textbox.ForeColor = Color.White;
+                sundayout_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                sundayout_textbox.ForeColor = Color.White;
+
+                monday_label.ForeColor = Color.White;
+                mondayin_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                mondayin_textbox.ForeColor = Color.White;
+                mondayout_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                mondayout_textbox.ForeColor = Color.White;
+
+                tuesday_label.ForeColor = Color.White;
+                tuesdayin_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                tuesdayin_textbox.ForeColor = Color.White;
+                tuesdayout_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                tuesdayout_textbox.ForeColor = Color.White;
+
+                wednesday_label.ForeColor = Color.White;
+                wednesdayin_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                wednesdayin_textbox.ForeColor = Color.White;
+                wednesdayout_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                wednesdayout_textbox.ForeColor = Color.White;
+
+                thursday_label.ForeColor = Color.White;
+                thursdayin_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                thursdayin_textbox.ForeColor = Color.White;
+                thursdayout_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                thursdayout_textbox.ForeColor = Color.White;
+
+                friday_label.ForeColor = Color.White;
+                fridayin_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                fridayin_textbox.ForeColor = Color.White;
+                fridayout_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                fridayout_textbox.ForeColor = Color.White;
+
+                saturday_label.ForeColor = Color.White;
+                saturdayin_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                saturdayin_textbox.ForeColor = Color.White;
+                saturdayout_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                saturdayout_textbox.ForeColor = Color.White;
+
+                search_label.ForeColor = Color.White;
+                search_textBox.BackColor = Color.FromArgb(163, 163, 163);
+                search_textBox.ForeColor = Color.White;
+
+                ein_label.ForeColor = Color.White;
+                EIN_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                EIN_textbox.ForeColor = Color.White;
+
+                firstname_label.ForeColor = Color.White;
+                firstname_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                firstname_textbox.ForeColor = Color.White;
+
+                lastname_label.ForeColor = Color.White;
+                lastname_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                lastname_textbox.ForeColor = Color.White;
+
+                cookout_datagridview.ForeColor = Color.White;
+                cookout_datagridview.DefaultCellStyle.BackColor = Color.FromArgb(200, 200, 200);
+                cookout_datagridview.GridColor = Color.White;
+            }
+            else
+            {
+                this.BackColor = Color.FromArgb(220, 222, 224);
+                in_label.ForeColor = Color.Black;
+                out_label.ForeColor = Color.Black;
+
+                sunday_label.ForeColor = Color.Black;
+                sundayin_textbox.BackColor = Color.White;
+                sundayin_textbox.ForeColor = Color.Black;
+                sundayout_textbox.BackColor = Color.White;
+                sundayout_textbox.ForeColor = Color.Black;
+
+                monday_label.ForeColor = Color.Black;
+                mondayin_textbox.BackColor = Color.White;
+                mondayin_textbox.ForeColor = Color.Black;
+                mondayout_textbox.BackColor = Color.White;
+                mondayout_textbox.ForeColor = Color.Black;
+
+                tuesday_label.ForeColor = Color.Black;
+                tuesdayin_textbox.BackColor = Color.White;
+                tuesdayin_textbox.ForeColor = Color.Black;
+                tuesdayout_textbox.BackColor = Color.White;
+                tuesdayout_textbox.ForeColor = Color.Black;
+
+                wednesday_label.ForeColor = Color.Black;
+                wednesdayin_textbox.BackColor = Color.White;
+                wednesdayin_textbox.ForeColor = Color.Black;
+                wednesdayout_textbox.BackColor = Color.White;
+                wednesdayout_textbox.ForeColor = Color.Black;
+
+                thursday_label.ForeColor = Color.Black;
+                thursdayin_textbox.BackColor = Color.White;
+                thursdayin_textbox.ForeColor = Color.Black;
+                thursdayout_textbox.BackColor = Color.White;
+                thursdayout_textbox.ForeColor = Color.Black;
+
+                friday_label.ForeColor = Color.Black;
+                fridayin_textbox.BackColor = Color.White;
+                fridayin_textbox.ForeColor = Color.Black;
+                fridayout_textbox.BackColor = Color.White;
+                fridayout_textbox.ForeColor = Color.Black;
+
+                saturday_label.ForeColor = Color.Black;
+                saturdayin_textbox.BackColor = Color.White;
+                saturdayin_textbox.ForeColor = Color.Black;
+                saturdayout_textbox.BackColor = Color.White;
+                saturdayout_textbox.ForeColor = Color.Black;
+
+                search_label.ForeColor = Color.Black;
+                search_textBox.BackColor = Color.White;
+                search_textBox.ForeColor = Color.Black;
+
+                ein_label.ForeColor = Color.Black;
+                EIN_textbox.BackColor = Color.White;
+                EIN_textbox.ForeColor = Color.Black;
+
+                firstname_label.ForeColor = Color.Black;
+                firstname_textbox.BackColor = Color.White;
+                firstname_textbox.ForeColor = Color.Black;
+
+                lastname_label.ForeColor = Color.Black;
+                lastname_textbox.BackColor = Color.White;
+                lastname_textbox.ForeColor = Color.Black;
+
+                cookout_datagridview.ForeColor = Color.Black;
+                cookout_datagridview.DefaultCellStyle.BackColor = Color.White;
+                cookout_datagridview.GridColor = Color.Black;
+            }
         }
     }
 }
