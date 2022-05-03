@@ -19,7 +19,7 @@ namespace Final_Capstone_try
         MySqlDataAdapter adapter;
         public static string selectAll = "Select EIN, FirstName, LastName, SundayIN, SundayOUT, MondayIN, MondayOUT, TuesdayIN, TuesdayOUT, WednesdayIN, WednesdayOUT, ThursdayIN, ThursdayOUT, FridayIN, FridayOUT, SaturdayIN, SaturdayOUT FROM employee ORDER BY LastName, FirstName";
         public DataTable dtcookout = new DataTable(); //create datatable to pass to database and allow search function
-
+        public int index;
         public cookout_editor()
         {
             InitializeComponent();
@@ -255,6 +255,26 @@ namespace Final_Capstone_try
                 cookout_datagridview.DefaultCellStyle.BackColor = Color.White;
                 cookout_datagridview.GridColor = Color.Black;
             }
+        }
+
+        private void up_button_Click(object sender, EventArgs e)
+        {
+            index = cookout_datagridview.CurrentRow.Index;
+            cookout_datagridview.Rows[index].Selected = false;
+            index--;
+            cookout_datagridview.Rows[index++].Selected = true;
+        }
+
+        private void down_button_Click(object sender, EventArgs e)
+        {
+            index = cookout_datagridview.CurrentRow.Index;
+            cookout_datagridview.Rows[index].Selected = false;
+            index++;
+            cookout_datagridview.Rows[index++].Selected = true;
+        }
+
+        private void edit_button_Click(object sender, EventArgs e)
+        {
         }
     }
 }

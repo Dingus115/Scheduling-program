@@ -68,26 +68,25 @@ namespace Final_Capstone_try
             this.down_button = new System.Windows.Forms.Button();
             this.theme_button = new System.Windows.Forms.Button();
             this.theme_combobox = new System.Windows.Forms.ComboBox();
+            this.edit_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.cookout_datagridview)).BeginInit();
             this.SuspendLayout();
             // 
             // cookout_datagridview
             // 
             this.cookout_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cookout_datagridview.Location = new System.Drawing.Point(16, 379);
-            this.cookout_datagridview.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cookout_datagridview.Location = new System.Drawing.Point(12, 308);
             this.cookout_datagridview.Name = "cookout_datagridview";
             this.cookout_datagridview.RowHeadersWidth = 51;
-            this.cookout_datagridview.Size = new System.Drawing.Size(2297, 635);
+            this.cookout_datagridview.Size = new System.Drawing.Size(1723, 516);
             this.cookout_datagridview.TabIndex = 0;
             this.cookout_datagridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cookout_datagridview_CellClick);
             // 
             // connection_check_button
             // 
-            this.connection_check_button.Location = new System.Drawing.Point(16, 15);
-            this.connection_check_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.connection_check_button.Location = new System.Drawing.Point(12, 12);
             this.connection_check_button.Name = "connection_check_button";
-            this.connection_check_button.Size = new System.Drawing.Size(152, 28);
+            this.connection_check_button.Size = new System.Drawing.Size(114, 23);
             this.connection_check_button.TabIndex = 1;
             this.connection_check_button.Text = "Check Connection";
             this.connection_check_button.UseVisualStyleBackColor = true;
@@ -95,10 +94,9 @@ namespace Final_Capstone_try
             // 
             // refresh_button
             // 
-            this.refresh_button.Location = new System.Drawing.Point(16, 343);
-            this.refresh_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.refresh_button.Location = new System.Drawing.Point(12, 279);
             this.refresh_button.Name = "refresh_button";
-            this.refresh_button.Size = new System.Drawing.Size(100, 28);
+            this.refresh_button.Size = new System.Drawing.Size(75, 23);
             this.refresh_button.TabIndex = 2;
             this.refresh_button.Text = "Refresh";
             this.refresh_button.UseVisualStyleBackColor = true;
@@ -106,284 +104,252 @@ namespace Final_Capstone_try
             // 
             // EIN_textbox
             // 
-            this.EIN_textbox.Location = new System.Drawing.Point(120, 81);
-            this.EIN_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EIN_textbox.Location = new System.Drawing.Point(90, 66);
             this.EIN_textbox.Name = "EIN_textbox";
-            this.EIN_textbox.Size = new System.Drawing.Size(132, 22);
+            this.EIN_textbox.Size = new System.Drawing.Size(100, 20);
             this.EIN_textbox.TabIndex = 3;
             // 
             // ein_label
             // 
             this.ein_label.AutoSize = true;
-            this.ein_label.Location = new System.Drawing.Point(76, 85);
-            this.ein_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ein_label.Location = new System.Drawing.Point(57, 69);
             this.ein_label.Name = "ein_label";
-            this.ein_label.Size = new System.Drawing.Size(34, 17);
+            this.ein_label.Size = new System.Drawing.Size(28, 13);
             this.ein_label.TabIndex = 4;
             this.ein_label.Text = "EIN:";
             // 
             // firstname_label
             // 
             this.firstname_label.AutoSize = true;
-            this.firstname_label.Location = new System.Drawing.Point(33, 117);
-            this.firstname_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.firstname_label.Location = new System.Drawing.Point(25, 95);
             this.firstname_label.Name = "firstname_label";
-            this.firstname_label.Size = new System.Drawing.Size(80, 17);
+            this.firstname_label.Size = new System.Drawing.Size(60, 13);
             this.firstname_label.TabIndex = 6;
             this.firstname_label.Text = "First Name:";
             // 
             // firstname_textbox
             // 
-            this.firstname_textbox.Location = new System.Drawing.Point(120, 113);
-            this.firstname_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.firstname_textbox.Location = new System.Drawing.Point(90, 92);
             this.firstname_textbox.Name = "firstname_textbox";
-            this.firstname_textbox.Size = new System.Drawing.Size(132, 22);
+            this.firstname_textbox.Size = new System.Drawing.Size(100, 20);
             this.firstname_textbox.TabIndex = 5;
             // 
             // lastname_label
             // 
             this.lastname_label.AutoSize = true;
-            this.lastname_label.Location = new System.Drawing.Point(32, 149);
-            this.lastname_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lastname_label.Location = new System.Drawing.Point(24, 121);
             this.lastname_label.Name = "lastname_label";
-            this.lastname_label.Size = new System.Drawing.Size(80, 17);
+            this.lastname_label.Size = new System.Drawing.Size(61, 13);
             this.lastname_label.TabIndex = 8;
             this.lastname_label.Text = "Last Name:";
             // 
             // lastname_textbox
             // 
-            this.lastname_textbox.Location = new System.Drawing.Point(120, 145);
-            this.lastname_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lastname_textbox.Location = new System.Drawing.Point(90, 118);
             this.lastname_textbox.Name = "lastname_textbox";
-            this.lastname_textbox.Size = new System.Drawing.Size(132, 22);
+            this.lastname_textbox.Size = new System.Drawing.Size(100, 20);
             this.lastname_textbox.TabIndex = 7;
             // 
             // thursdayin_textbox
             // 
-            this.thursdayin_textbox.Location = new System.Drawing.Point(767, 250);
-            this.thursdayin_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.thursdayin_textbox.Location = new System.Drawing.Point(575, 203);
             this.thursdayin_textbox.Name = "thursdayin_textbox";
-            this.thursdayin_textbox.Size = new System.Drawing.Size(132, 22);
+            this.thursdayin_textbox.Size = new System.Drawing.Size(100, 20);
             this.thursdayin_textbox.TabIndex = 9;
             // 
             // wednesdayout_textbox
             // 
-            this.wednesdayout_textbox.Location = new System.Drawing.Point(607, 282);
-            this.wednesdayout_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wednesdayout_textbox.Location = new System.Drawing.Point(455, 229);
             this.wednesdayout_textbox.Name = "wednesdayout_textbox";
-            this.wednesdayout_textbox.Size = new System.Drawing.Size(132, 22);
+            this.wednesdayout_textbox.Size = new System.Drawing.Size(100, 20);
             this.wednesdayout_textbox.TabIndex = 10;
             // 
             // wednesdayin_textbox
             // 
-            this.wednesdayin_textbox.Location = new System.Drawing.Point(607, 250);
-            this.wednesdayin_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wednesdayin_textbox.Location = new System.Drawing.Point(455, 203);
             this.wednesdayin_textbox.Name = "wednesdayin_textbox";
-            this.wednesdayin_textbox.Size = new System.Drawing.Size(132, 22);
+            this.wednesdayin_textbox.Size = new System.Drawing.Size(100, 20);
             this.wednesdayin_textbox.TabIndex = 11;
             // 
             // tuesdayout_textbox
             // 
-            this.tuesdayout_textbox.Location = new System.Drawing.Point(447, 282);
-            this.tuesdayout_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tuesdayout_textbox.Location = new System.Drawing.Point(335, 229);
             this.tuesdayout_textbox.Name = "tuesdayout_textbox";
-            this.tuesdayout_textbox.Size = new System.Drawing.Size(132, 22);
+            this.tuesdayout_textbox.Size = new System.Drawing.Size(100, 20);
             this.tuesdayout_textbox.TabIndex = 12;
             // 
             // tuesdayin_textbox
             // 
-            this.tuesdayin_textbox.Location = new System.Drawing.Point(447, 250);
-            this.tuesdayin_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tuesdayin_textbox.Location = new System.Drawing.Point(335, 203);
             this.tuesdayin_textbox.Name = "tuesdayin_textbox";
-            this.tuesdayin_textbox.Size = new System.Drawing.Size(132, 22);
+            this.tuesdayin_textbox.Size = new System.Drawing.Size(100, 20);
             this.tuesdayin_textbox.TabIndex = 13;
             // 
             // sundayout_textbox
             // 
-            this.sundayout_textbox.Location = new System.Drawing.Point(127, 282);
-            this.sundayout_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sundayout_textbox.Location = new System.Drawing.Point(95, 229);
             this.sundayout_textbox.Name = "sundayout_textbox";
-            this.sundayout_textbox.Size = new System.Drawing.Size(132, 22);
+            this.sundayout_textbox.Size = new System.Drawing.Size(100, 20);
             this.sundayout_textbox.TabIndex = 14;
             // 
             // sundayin_textbox
             // 
-            this.sundayin_textbox.Location = new System.Drawing.Point(127, 250);
-            this.sundayin_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sundayin_textbox.Location = new System.Drawing.Point(95, 203);
             this.sundayin_textbox.Name = "sundayin_textbox";
-            this.sundayin_textbox.Size = new System.Drawing.Size(132, 22);
+            this.sundayin_textbox.Size = new System.Drawing.Size(100, 20);
             this.sundayin_textbox.TabIndex = 15;
             // 
             // mondayin_textbox
             // 
-            this.mondayin_textbox.Location = new System.Drawing.Point(287, 250);
-            this.mondayin_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mondayin_textbox.Location = new System.Drawing.Point(215, 203);
             this.mondayin_textbox.Name = "mondayin_textbox";
-            this.mondayin_textbox.Size = new System.Drawing.Size(132, 22);
+            this.mondayin_textbox.Size = new System.Drawing.Size(100, 20);
             this.mondayin_textbox.TabIndex = 16;
             // 
             // mondayout_textbox
             // 
-            this.mondayout_textbox.Location = new System.Drawing.Point(287, 283);
-            this.mondayout_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mondayout_textbox.Location = new System.Drawing.Point(215, 230);
             this.mondayout_textbox.Name = "mondayout_textbox";
-            this.mondayout_textbox.Size = new System.Drawing.Size(132, 22);
+            this.mondayout_textbox.Size = new System.Drawing.Size(100, 20);
             this.mondayout_textbox.TabIndex = 17;
             // 
             // saturdayout_textbox
             // 
-            this.saturdayout_textbox.Location = new System.Drawing.Point(1087, 281);
-            this.saturdayout_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saturdayout_textbox.Location = new System.Drawing.Point(815, 228);
             this.saturdayout_textbox.Name = "saturdayout_textbox";
-            this.saturdayout_textbox.Size = new System.Drawing.Size(132, 22);
+            this.saturdayout_textbox.Size = new System.Drawing.Size(100, 20);
             this.saturdayout_textbox.TabIndex = 18;
             // 
             // saturdayin_textbox
             // 
-            this.saturdayin_textbox.Location = new System.Drawing.Point(1087, 249);
-            this.saturdayin_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saturdayin_textbox.Location = new System.Drawing.Point(815, 202);
             this.saturdayin_textbox.Name = "saturdayin_textbox";
-            this.saturdayin_textbox.Size = new System.Drawing.Size(132, 22);
+            this.saturdayin_textbox.Size = new System.Drawing.Size(100, 20);
             this.saturdayin_textbox.TabIndex = 19;
             // 
             // fridayout_textbox
             // 
-            this.fridayout_textbox.Location = new System.Drawing.Point(927, 282);
-            this.fridayout_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fridayout_textbox.Location = new System.Drawing.Point(695, 229);
             this.fridayout_textbox.Name = "fridayout_textbox";
-            this.fridayout_textbox.Size = new System.Drawing.Size(132, 22);
+            this.fridayout_textbox.Size = new System.Drawing.Size(100, 20);
             this.fridayout_textbox.TabIndex = 20;
             // 
             // fridayin_textbox
             // 
-            this.fridayin_textbox.Location = new System.Drawing.Point(927, 250);
-            this.fridayin_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fridayin_textbox.Location = new System.Drawing.Point(695, 203);
             this.fridayin_textbox.Name = "fridayin_textbox";
-            this.fridayin_textbox.Size = new System.Drawing.Size(132, 22);
+            this.fridayin_textbox.Size = new System.Drawing.Size(100, 20);
             this.fridayin_textbox.TabIndex = 21;
             // 
             // thursdayout_textbox
             // 
-            this.thursdayout_textbox.Location = new System.Drawing.Point(767, 283);
-            this.thursdayout_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.thursdayout_textbox.Location = new System.Drawing.Point(575, 230);
             this.thursdayout_textbox.Name = "thursdayout_textbox";
-            this.thursdayout_textbox.Size = new System.Drawing.Size(132, 22);
+            this.thursdayout_textbox.Size = new System.Drawing.Size(100, 20);
             this.thursdayout_textbox.TabIndex = 22;
             // 
             // sunday_label
             // 
             this.sunday_label.AutoSize = true;
-            this.sunday_label.Location = new System.Drawing.Point(165, 218);
-            this.sunday_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.sunday_label.Location = new System.Drawing.Point(124, 177);
             this.sunday_label.Name = "sunday_label";
-            this.sunday_label.Size = new System.Drawing.Size(56, 17);
+            this.sunday_label.Size = new System.Drawing.Size(43, 13);
             this.sunday_label.TabIndex = 23;
             this.sunday_label.Text = "Sunday";
             // 
             // monday_label
             // 
             this.monday_label.AutoSize = true;
-            this.monday_label.Location = new System.Drawing.Point(324, 218);
-            this.monday_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.monday_label.Location = new System.Drawing.Point(243, 177);
             this.monday_label.Name = "monday_label";
-            this.monday_label.Size = new System.Drawing.Size(58, 17);
+            this.monday_label.Size = new System.Drawing.Size(45, 13);
             this.monday_label.TabIndex = 24;
             this.monday_label.Text = "Monday";
             // 
             // tuesday_label
             // 
             this.tuesday_label.AutoSize = true;
-            this.tuesday_label.Location = new System.Drawing.Point(481, 218);
-            this.tuesday_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tuesday_label.Location = new System.Drawing.Point(361, 177);
             this.tuesday_label.Name = "tuesday_label";
-            this.tuesday_label.Size = new System.Drawing.Size(63, 17);
+            this.tuesday_label.Size = new System.Drawing.Size(48, 13);
             this.tuesday_label.TabIndex = 25;
             this.tuesday_label.Text = "Tuesday";
             // 
             // wednesday_label
             // 
             this.wednesday_label.AutoSize = true;
-            this.wednesday_label.Location = new System.Drawing.Point(636, 218);
-            this.wednesday_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.wednesday_label.Location = new System.Drawing.Point(477, 177);
             this.wednesday_label.Name = "wednesday_label";
-            this.wednesday_label.Size = new System.Drawing.Size(83, 17);
+            this.wednesday_label.Size = new System.Drawing.Size(64, 13);
             this.wednesday_label.TabIndex = 26;
             this.wednesday_label.Text = "Wednesday";
             // 
             // thursday_label
             // 
             this.thursday_label.AutoSize = true;
-            this.thursday_label.Location = new System.Drawing.Point(788, 218);
-            this.thursday_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.thursday_label.Location = new System.Drawing.Point(591, 177);
             this.thursday_label.Name = "thursday_label";
-            this.thursday_label.Size = new System.Drawing.Size(68, 17);
+            this.thursday_label.Size = new System.Drawing.Size(51, 13);
             this.thursday_label.TabIndex = 27;
             this.thursday_label.Text = "Thursday";
             // 
             // friday_label
             // 
             this.friday_label.AutoSize = true;
-            this.friday_label.Location = new System.Drawing.Point(957, 218);
-            this.friday_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.friday_label.Location = new System.Drawing.Point(718, 177);
             this.friday_label.Name = "friday_label";
-            this.friday_label.Size = new System.Drawing.Size(47, 17);
+            this.friday_label.Size = new System.Drawing.Size(35, 13);
             this.friday_label.TabIndex = 28;
             this.friday_label.Text = "Friday";
             // 
             // saturday_label
             // 
             this.saturday_label.AutoSize = true;
-            this.saturday_label.Location = new System.Drawing.Point(1121, 218);
-            this.saturday_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.saturday_label.Location = new System.Drawing.Point(841, 177);
             this.saturday_label.Name = "saturday_label";
-            this.saturday_label.Size = new System.Drawing.Size(65, 17);
+            this.saturday_label.Size = new System.Drawing.Size(49, 13);
             this.saturday_label.TabIndex = 29;
             this.saturday_label.Text = "Saturday";
             // 
             // in_label
             // 
             this.in_label.AutoSize = true;
-            this.in_label.Location = new System.Drawing.Point(87, 252);
-            this.in_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.in_label.Location = new System.Drawing.Point(65, 205);
             this.in_label.Name = "in_label";
-            this.in_label.Size = new System.Drawing.Size(23, 17);
+            this.in_label.Size = new System.Drawing.Size(19, 13);
             this.in_label.TabIndex = 30;
             this.in_label.Text = "In:";
             // 
             // out_label
             // 
             this.out_label.AutoSize = true;
-            this.out_label.Location = new System.Drawing.Point(76, 284);
-            this.out_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.out_label.Location = new System.Drawing.Point(57, 231);
             this.out_label.Name = "out_label";
-            this.out_label.Size = new System.Drawing.Size(35, 17);
+            this.out_label.Size = new System.Drawing.Size(27, 13);
             this.out_label.TabIndex = 31;
             this.out_label.Text = "Out:";
             // 
             // search_textBox
             // 
-            this.search_textBox.Location = new System.Drawing.Point(559, 17);
-            this.search_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.search_textBox.Location = new System.Drawing.Point(419, 14);
             this.search_textBox.Name = "search_textBox";
-            this.search_textBox.Size = new System.Drawing.Size(132, 22);
+            this.search_textBox.Size = new System.Drawing.Size(100, 20);
             this.search_textBox.TabIndex = 32;
             // 
             // search_label
             // 
             this.search_label.AutoSize = true;
-            this.search_label.Location = new System.Drawing.Point(492, 21);
-            this.search_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.search_label.Location = new System.Drawing.Point(369, 17);
             this.search_label.Name = "search_label";
-            this.search_label.Size = new System.Drawing.Size(57, 17);
+            this.search_label.Size = new System.Drawing.Size(44, 13);
             this.search_label.TabIndex = 33;
             this.search_label.Text = "Search:";
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(575, 49);
-            this.searchButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchButton.Location = new System.Drawing.Point(431, 40);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(100, 28);
+            this.searchButton.Size = new System.Drawing.Size(75, 23);
             this.searchButton.TabIndex = 34;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
@@ -391,29 +357,30 @@ namespace Final_Capstone_try
             // 
             // up_button
             // 
-            this.up_button.Location = new System.Drawing.Point(140, 343);
-            this.up_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.up_button.Location = new System.Drawing.Point(105, 279);
             this.up_button.Name = "up_button";
-            this.up_button.Size = new System.Drawing.Size(100, 28);
+            this.up_button.Size = new System.Drawing.Size(75, 23);
             this.up_button.TabIndex = 35;
             this.up_button.Text = "Up";
             this.up_button.UseVisualStyleBackColor = true;
+            this.up_button.Click += new System.EventHandler(this.up_button_Click);
             // 
             // down_button
             // 
-            this.down_button.Location = new System.Drawing.Point(248, 343);
-            this.down_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.down_button.Location = new System.Drawing.Point(186, 279);
             this.down_button.Name = "down_button";
-            this.down_button.Size = new System.Drawing.Size(100, 28);
+            this.down_button.Size = new System.Drawing.Size(75, 23);
             this.down_button.TabIndex = 36;
             this.down_button.Text = "Down";
             this.down_button.UseVisualStyleBackColor = true;
+            this.down_button.Click += new System.EventHandler(this.down_button_Click);
             // 
             // theme_button
             // 
-            this.theme_button.Location = new System.Drawing.Point(1387, 12);
+            this.theme_button.Location = new System.Drawing.Point(1040, 10);
+            this.theme_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.theme_button.Name = "theme_button";
-            this.theme_button.Size = new System.Drawing.Size(148, 23);
+            this.theme_button.Size = new System.Drawing.Size(111, 19);
             this.theme_button.TabIndex = 37;
             this.theme_button.Text = "Select Theme";
             this.theme_button.UseVisualStyleBackColor = true;
@@ -422,17 +389,29 @@ namespace Final_Capstone_try
             // theme_combobox
             // 
             this.theme_combobox.FormattingEnabled = true;
-            this.theme_combobox.Location = new System.Drawing.Point(1560, 12);
+            this.theme_combobox.Location = new System.Drawing.Point(1170, 10);
+            this.theme_combobox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.theme_combobox.Name = "theme_combobox";
-            this.theme_combobox.Size = new System.Drawing.Size(121, 24);
+            this.theme_combobox.Size = new System.Drawing.Size(92, 21);
             this.theme_combobox.TabIndex = 38;
+            // 
+            // edit_button
+            // 
+            this.edit_button.Location = new System.Drawing.Point(213, 64);
+            this.edit_button.Name = "edit_button";
+            this.edit_button.Size = new System.Drawing.Size(75, 23);
+            this.edit_button.TabIndex = 39;
+            this.edit_button.Text = "Edit";
+            this.edit_button.UseVisualStyleBackColor = true;
+            this.edit_button.Click += new System.EventHandler(this.edit_button_Click);
             // 
             // cookout_editor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1924, 1029);
+            this.ClientSize = new System.Drawing.Size(1747, 836);
+            this.Controls.Add(this.edit_button);
             this.Controls.Add(this.theme_combobox);
             this.Controls.Add(this.theme_button);
             this.Controls.Add(this.down_button);
@@ -472,7 +451,6 @@ namespace Final_Capstone_try
             this.Controls.Add(this.refresh_button);
             this.Controls.Add(this.connection_check_button);
             this.Controls.Add(this.cookout_datagridview);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "cookout_editor";
             this.Text = "cookout_editor";
             this.Load += new System.EventHandler(this.cookout_editor_Load);
@@ -523,5 +501,6 @@ namespace Final_Capstone_try
         private System.Windows.Forms.Button down_button;
         private System.Windows.Forms.Button theme_button;
         private System.Windows.Forms.ComboBox theme_combobox;
+        private System.Windows.Forms.Button edit_button;
     }
 }

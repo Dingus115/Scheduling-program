@@ -16,7 +16,7 @@ namespace Final_Capstone_try
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login());
+            Application.Run(new cookout_editor());
         }
     }
 }
