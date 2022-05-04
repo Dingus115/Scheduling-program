@@ -80,7 +80,7 @@ namespace Final_Capstone_try
             this.cookout_datagridview.Margin = new System.Windows.Forms.Padding(4);
             this.cookout_datagridview.Name = "cookout_datagridview";
             this.cookout_datagridview.RowHeadersWidth = 51;
-            this.cookout_datagridview.Size = new System.Drawing.Size(2297, 635);
+            this.cookout_datagridview.Size = new System.Drawing.Size(2297, 535);
             this.cookout_datagridview.TabIndex = 0;
             this.cookout_datagridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cookout_datagridview_CellClick);
             // 

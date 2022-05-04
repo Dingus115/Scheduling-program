@@ -113,7 +113,7 @@ namespace Final_Capstone_try
 
             if(theme == "Dark")
             {
-                this.BackColor = Color.FromArgb(70, 70, 70);
+                this.BackColor = Color.FromArgb(41, 42, 43);
                 in_label.ForeColor = Color.White;
                 out_label.ForeColor = Color.White;
 
@@ -175,7 +175,7 @@ namespace Final_Capstone_try
                 lastname_textbox.BackColor = Color.FromArgb(163, 163, 163);
                 lastname_textbox.ForeColor = Color.White;
 
-                cookout_datagridview.ForeColor = Color.White;
+                cookout_datagridview.ForeColor = Color.Black;
                 cookout_datagridview.DefaultCellStyle.BackColor = Color.FromArgb(200, 200, 200);
                 cookout_datagridview.GridColor = Color.White;
             }
@@ -317,8 +317,12 @@ namespace Final_Capstone_try
 
         private void newEmployee_button_Click(object sender, EventArgs e)
         {
-            cookout_datagridview.Rows[0].Selected = true;
-            cookout_datagridview.Rows[0].Selected = false;
+            connection.Open();
+            string insert = "INSERT INTO employee () values()";
+            command.CommandText = insert;
+            command.ExecuteNonQuery();
+            connection.Close();
+            connection.Dispose();
         }
     }
 }
