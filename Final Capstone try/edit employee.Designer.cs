@@ -34,7 +34,7 @@ namespace Final_Capstone_try
             this.mondayOUTedit_textbox = new System.Windows.Forms.TextBox();
             this.mondayINedit_textbox = new System.Windows.Forms.TextBox();
             this.wednesdayOUTedit_textbox = new System.Windows.Forms.TextBox();
-            this.textBox6wednesdayedit_textbox = new System.Windows.Forms.TextBox();
+            this.wednesdayedit_textbox = new System.Windows.Forms.TextBox();
             this.tuesdayOUTedit_textbox = new System.Windows.Forms.TextBox();
             this.tuesdayINedit_textbox = new System.Windows.Forms.TextBox();
             this.fridayOUTedit_textbox = new System.Windows.Forms.TextBox();
@@ -58,240 +58,293 @@ namespace Final_Capstone_try
             this.sunday_label = new System.Windows.Forms.Label();
             this.out_label = new System.Windows.Forms.Label();
             this.in_label = new System.Windows.Forms.Label();
+            this.save_button = new System.Windows.Forms.Button();
+            this.close_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // sundayINedit_textbox
             // 
-            this.sundayINedit_textbox.Location = new System.Drawing.Point(80, 215);
+            this.sundayINedit_textbox.Location = new System.Drawing.Point(107, 265);
+            this.sundayINedit_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.sundayINedit_textbox.Name = "sundayINedit_textbox";
-            this.sundayINedit_textbox.Size = new System.Drawing.Size(100, 20);
+            this.sundayINedit_textbox.Size = new System.Drawing.Size(132, 22);
             this.sundayINedit_textbox.TabIndex = 0;
             // 
             // sundayOUTedit_textbox
             // 
-            this.sundayOUTedit_textbox.Location = new System.Drawing.Point(80, 241);
+            this.sundayOUTedit_textbox.Location = new System.Drawing.Point(107, 297);
+            this.sundayOUTedit_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.sundayOUTedit_textbox.Name = "sundayOUTedit_textbox";
-            this.sundayOUTedit_textbox.Size = new System.Drawing.Size(100, 20);
+            this.sundayOUTedit_textbox.Size = new System.Drawing.Size(132, 22);
             this.sundayOUTedit_textbox.TabIndex = 1;
             // 
             // mondayOUTedit_textbox
             // 
-            this.mondayOUTedit_textbox.Location = new System.Drawing.Point(186, 241);
+            this.mondayOUTedit_textbox.Location = new System.Drawing.Point(248, 297);
+            this.mondayOUTedit_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.mondayOUTedit_textbox.Name = "mondayOUTedit_textbox";
-            this.mondayOUTedit_textbox.Size = new System.Drawing.Size(100, 20);
+            this.mondayOUTedit_textbox.Size = new System.Drawing.Size(132, 22);
             this.mondayOUTedit_textbox.TabIndex = 3;
             // 
             // mondayINedit_textbox
             // 
-            this.mondayINedit_textbox.Location = new System.Drawing.Point(186, 215);
+            this.mondayINedit_textbox.Location = new System.Drawing.Point(248, 265);
+            this.mondayINedit_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.mondayINedit_textbox.Name = "mondayINedit_textbox";
-            this.mondayINedit_textbox.Size = new System.Drawing.Size(100, 20);
+            this.mondayINedit_textbox.Size = new System.Drawing.Size(132, 22);
             this.mondayINedit_textbox.TabIndex = 2;
             // 
             // wednesdayOUTedit_textbox
             // 
-            this.wednesdayOUTedit_textbox.Location = new System.Drawing.Point(398, 241);
+            this.wednesdayOUTedit_textbox.Location = new System.Drawing.Point(531, 297);
+            this.wednesdayOUTedit_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.wednesdayOUTedit_textbox.Name = "wednesdayOUTedit_textbox";
-            this.wednesdayOUTedit_textbox.Size = new System.Drawing.Size(100, 20);
+            this.wednesdayOUTedit_textbox.Size = new System.Drawing.Size(132, 22);
             this.wednesdayOUTedit_textbox.TabIndex = 7;
             // 
-            // textBox6wednesdayedit_textbox
+            // wednesdayedit_textbox
             // 
-            this.textBox6wednesdayedit_textbox.Location = new System.Drawing.Point(398, 215);
-            this.textBox6wednesdayedit_textbox.Name = "textBox6wednesdayedit_textbox";
-            this.textBox6wednesdayedit_textbox.Size = new System.Drawing.Size(100, 20);
-            this.textBox6wednesdayedit_textbox.TabIndex = 6;
+            this.wednesdayedit_textbox.Location = new System.Drawing.Point(531, 265);
+            this.wednesdayedit_textbox.Margin = new System.Windows.Forms.Padding(4);
+            this.wednesdayedit_textbox.Name = "wednesdayedit_textbox";
+            this.wednesdayedit_textbox.Size = new System.Drawing.Size(132, 22);
+            this.wednesdayedit_textbox.TabIndex = 6;
             // 
             // tuesdayOUTedit_textbox
             // 
-            this.tuesdayOUTedit_textbox.Location = new System.Drawing.Point(292, 241);
+            this.tuesdayOUTedit_textbox.Location = new System.Drawing.Point(389, 297);
+            this.tuesdayOUTedit_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.tuesdayOUTedit_textbox.Name = "tuesdayOUTedit_textbox";
-            this.tuesdayOUTedit_textbox.Size = new System.Drawing.Size(100, 20);
+            this.tuesdayOUTedit_textbox.Size = new System.Drawing.Size(132, 22);
             this.tuesdayOUTedit_textbox.TabIndex = 5;
             // 
             // tuesdayINedit_textbox
             // 
-            this.tuesdayINedit_textbox.Location = new System.Drawing.Point(292, 215);
+            this.tuesdayINedit_textbox.Location = new System.Drawing.Point(389, 265);
+            this.tuesdayINedit_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.tuesdayINedit_textbox.Name = "tuesdayINedit_textbox";
-            this.tuesdayINedit_textbox.Size = new System.Drawing.Size(100, 20);
+            this.tuesdayINedit_textbox.Size = new System.Drawing.Size(132, 22);
             this.tuesdayINedit_textbox.TabIndex = 4;
             // 
             // fridayOUTedit_textbox
             // 
-            this.fridayOUTedit_textbox.Location = new System.Drawing.Point(610, 241);
+            this.fridayOUTedit_textbox.Location = new System.Drawing.Point(813, 297);
+            this.fridayOUTedit_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.fridayOUTedit_textbox.Name = "fridayOUTedit_textbox";
-            this.fridayOUTedit_textbox.Size = new System.Drawing.Size(100, 20);
+            this.fridayOUTedit_textbox.Size = new System.Drawing.Size(132, 22);
             this.fridayOUTedit_textbox.TabIndex = 11;
             // 
             // fridayINedit_textbox
             // 
-            this.fridayINedit_textbox.Location = new System.Drawing.Point(610, 215);
+            this.fridayINedit_textbox.Location = new System.Drawing.Point(813, 265);
+            this.fridayINedit_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.fridayINedit_textbox.Name = "fridayINedit_textbox";
-            this.fridayINedit_textbox.Size = new System.Drawing.Size(100, 20);
+            this.fridayINedit_textbox.Size = new System.Drawing.Size(132, 22);
             this.fridayINedit_textbox.TabIndex = 10;
             // 
             // thursdayOUTedit_textbox
             // 
-            this.thursdayOUTedit_textbox.Location = new System.Drawing.Point(504, 241);
+            this.thursdayOUTedit_textbox.Location = new System.Drawing.Point(672, 297);
+            this.thursdayOUTedit_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.thursdayOUTedit_textbox.Name = "thursdayOUTedit_textbox";
-            this.thursdayOUTedit_textbox.Size = new System.Drawing.Size(100, 20);
+            this.thursdayOUTedit_textbox.Size = new System.Drawing.Size(132, 22);
             this.thursdayOUTedit_textbox.TabIndex = 9;
             // 
             // thursdayINedit_textbox
             // 
-            this.thursdayINedit_textbox.Location = new System.Drawing.Point(504, 215);
+            this.thursdayINedit_textbox.Location = new System.Drawing.Point(672, 265);
+            this.thursdayINedit_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.thursdayINedit_textbox.Name = "thursdayINedit_textbox";
-            this.thursdayINedit_textbox.Size = new System.Drawing.Size(100, 20);
+            this.thursdayINedit_textbox.Size = new System.Drawing.Size(132, 22);
             this.thursdayINedit_textbox.TabIndex = 8;
             // 
             // saturdayOUTedit_textbox
             // 
-            this.saturdayOUTedit_textbox.Location = new System.Drawing.Point(716, 241);
+            this.saturdayOUTedit_textbox.Location = new System.Drawing.Point(955, 297);
+            this.saturdayOUTedit_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.saturdayOUTedit_textbox.Name = "saturdayOUTedit_textbox";
-            this.saturdayOUTedit_textbox.Size = new System.Drawing.Size(100, 20);
+            this.saturdayOUTedit_textbox.Size = new System.Drawing.Size(132, 22);
             this.saturdayOUTedit_textbox.TabIndex = 13;
             // 
             // satudayINedit_textbox
             // 
-            this.satudayINedit_textbox.Location = new System.Drawing.Point(716, 215);
+            this.satudayINedit_textbox.Location = new System.Drawing.Point(955, 265);
+            this.satudayINedit_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.satudayINedit_textbox.Name = "satudayINedit_textbox";
-            this.satudayINedit_textbox.Size = new System.Drawing.Size(100, 20);
+            this.satudayINedit_textbox.Size = new System.Drawing.Size(132, 22);
             this.satudayINedit_textbox.TabIndex = 12;
             // 
             // firstnameedit_textbox
             // 
-            this.firstnameedit_textbox.Location = new System.Drawing.Point(80, 90);
+            this.firstnameedit_textbox.Location = new System.Drawing.Point(107, 111);
+            this.firstnameedit_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.firstnameedit_textbox.Name = "firstnameedit_textbox";
-            this.firstnameedit_textbox.Size = new System.Drawing.Size(100, 20);
+            this.firstnameedit_textbox.Size = new System.Drawing.Size(132, 22);
             this.firstnameedit_textbox.TabIndex = 15;
             // 
             // EINedit_textbox
             // 
-            this.EINedit_textbox.Location = new System.Drawing.Point(80, 64);
+            this.EINedit_textbox.Location = new System.Drawing.Point(107, 79);
+            this.EINedit_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.EINedit_textbox.Name = "EINedit_textbox";
-            this.EINedit_textbox.Size = new System.Drawing.Size(100, 20);
+            this.EINedit_textbox.Size = new System.Drawing.Size(132, 22);
             this.EINedit_textbox.TabIndex = 14;
             // 
             // lastnameedit_textbox
             // 
-            this.lastnameedit_textbox.Location = new System.Drawing.Point(80, 116);
+            this.lastnameedit_textbox.Location = new System.Drawing.Point(107, 143);
+            this.lastnameedit_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.lastnameedit_textbox.Name = "lastnameedit_textbox";
-            this.lastnameedit_textbox.Size = new System.Drawing.Size(100, 20);
+            this.lastnameedit_textbox.Size = new System.Drawing.Size(132, 22);
             this.lastnameedit_textbox.TabIndex = 16;
             // 
             // lastname_label
             // 
             this.lastname_label.AutoSize = true;
-            this.lastname_label.Location = new System.Drawing.Point(13, 119);
+            this.lastname_label.Location = new System.Drawing.Point(17, 146);
+            this.lastname_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lastname_label.Name = "lastname_label";
-            this.lastname_label.Size = new System.Drawing.Size(61, 13);
+            this.lastname_label.Size = new System.Drawing.Size(80, 17);
             this.lastname_label.TabIndex = 19;
             this.lastname_label.Text = "Last Name:";
             // 
             // firstname_label
             // 
             this.firstname_label.AutoSize = true;
-            this.firstname_label.Location = new System.Drawing.Point(14, 93);
+            this.firstname_label.Location = new System.Drawing.Point(19, 114);
+            this.firstname_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.firstname_label.Name = "firstname_label";
-            this.firstname_label.Size = new System.Drawing.Size(60, 13);
+            this.firstname_label.Size = new System.Drawing.Size(80, 17);
             this.firstname_label.TabIndex = 18;
             this.firstname_label.Text = "First Name:";
             // 
             // ein_label
             // 
             this.ein_label.AutoSize = true;
-            this.ein_label.Location = new System.Drawing.Point(46, 67);
+            this.ein_label.Location = new System.Drawing.Point(61, 82);
+            this.ein_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ein_label.Name = "ein_label";
-            this.ein_label.Size = new System.Drawing.Size(28, 13);
+            this.ein_label.Size = new System.Drawing.Size(34, 17);
             this.ein_label.TabIndex = 17;
             this.ein_label.Text = "EIN:";
             // 
             // saturday_label
             // 
             this.saturday_label.AutoSize = true;
-            this.saturday_label.Location = new System.Drawing.Point(744, 199);
+            this.saturday_label.Location = new System.Drawing.Point(992, 245);
+            this.saturday_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.saturday_label.Name = "saturday_label";
-            this.saturday_label.Size = new System.Drawing.Size(49, 13);
+            this.saturday_label.Size = new System.Drawing.Size(65, 17);
             this.saturday_label.TabIndex = 36;
             this.saturday_label.Text = "Saturday";
             // 
             // friday_label
             // 
             this.friday_label.AutoSize = true;
-            this.friday_label.Location = new System.Drawing.Point(644, 199);
+            this.friday_label.Location = new System.Drawing.Point(859, 245);
+            this.friday_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.friday_label.Name = "friday_label";
-            this.friday_label.Size = new System.Drawing.Size(35, 13);
+            this.friday_label.Size = new System.Drawing.Size(47, 17);
             this.friday_label.TabIndex = 35;
             this.friday_label.Text = "Friday";
             // 
             // thursday_label
             // 
             this.thursday_label.AutoSize = true;
-            this.thursday_label.Location = new System.Drawing.Point(529, 199);
+            this.thursday_label.Location = new System.Drawing.Point(705, 245);
+            this.thursday_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.thursday_label.Name = "thursday_label";
-            this.thursday_label.Size = new System.Drawing.Size(51, 13);
+            this.thursday_label.Size = new System.Drawing.Size(68, 17);
             this.thursday_label.TabIndex = 34;
             this.thursday_label.Text = "Thursday";
             // 
             // wednesday_label
             // 
             this.wednesday_label.AutoSize = true;
-            this.wednesday_label.Location = new System.Drawing.Point(417, 199);
+            this.wednesday_label.Location = new System.Drawing.Point(556, 245);
+            this.wednesday_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.wednesday_label.Name = "wednesday_label";
-            this.wednesday_label.Size = new System.Drawing.Size(64, 13);
+            this.wednesday_label.Size = new System.Drawing.Size(83, 17);
             this.wednesday_label.TabIndex = 33;
             this.wednesday_label.Text = "Wednesday";
             // 
             // tuesday_label
             // 
             this.tuesday_label.AutoSize = true;
-            this.tuesday_label.Location = new System.Drawing.Point(318, 199);
+            this.tuesday_label.Location = new System.Drawing.Point(424, 245);
+            this.tuesday_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.tuesday_label.Name = "tuesday_label";
-            this.tuesday_label.Size = new System.Drawing.Size(48, 13);
+            this.tuesday_label.Size = new System.Drawing.Size(63, 17);
             this.tuesday_label.TabIndex = 32;
             this.tuesday_label.Text = "Tuesday";
             // 
             // monday_label
             // 
             this.monday_label.AutoSize = true;
-            this.monday_label.Location = new System.Drawing.Point(215, 199);
+            this.monday_label.Location = new System.Drawing.Point(287, 245);
+            this.monday_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.monday_label.Name = "monday_label";
-            this.monday_label.Size = new System.Drawing.Size(45, 13);
+            this.monday_label.Size = new System.Drawing.Size(58, 17);
             this.monday_label.TabIndex = 31;
             this.monday_label.Text = "Monday";
             // 
             // sunday_label
             // 
             this.sunday_label.AutoSize = true;
-            this.sunday_label.Location = new System.Drawing.Point(110, 199);
+            this.sunday_label.Location = new System.Drawing.Point(147, 245);
+            this.sunday_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sunday_label.Name = "sunday_label";
-            this.sunday_label.Size = new System.Drawing.Size(43, 13);
+            this.sunday_label.Size = new System.Drawing.Size(56, 17);
             this.sunday_label.TabIndex = 30;
             this.sunday_label.Text = "Sunday";
             // 
             // out_label
             // 
             this.out_label.AutoSize = true;
-            this.out_label.Location = new System.Drawing.Point(38, 244);
+            this.out_label.Location = new System.Drawing.Point(51, 300);
+            this.out_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.out_label.Name = "out_label";
-            this.out_label.Size = new System.Drawing.Size(27, 13);
+            this.out_label.Size = new System.Drawing.Size(35, 17);
             this.out_label.TabIndex = 38;
             this.out_label.Text = "Out:";
             // 
             // in_label
             // 
             this.in_label.AutoSize = true;
-            this.in_label.Location = new System.Drawing.Point(46, 218);
+            this.in_label.Location = new System.Drawing.Point(61, 268);
+            this.in_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.in_label.Name = "in_label";
-            this.in_label.Size = new System.Drawing.Size(19, 13);
+            this.in_label.Size = new System.Drawing.Size(23, 17);
             this.in_label.TabIndex = 37;
             this.in_label.Text = "In:";
             // 
+            // save_button
+            // 
+            this.save_button.Location = new System.Drawing.Point(305, 76);
+            this.save_button.Name = "save_button";
+            this.save_button.Size = new System.Drawing.Size(134, 23);
+            this.save_button.TabIndex = 39;
+            this.save_button.Text = "Save Changes";
+            this.save_button.UseVisualStyleBackColor = true;
+            this.save_button.Click += new System.EventHandler(this.save_button_Click);
+            // 
+            // close_Button
+            // 
+            this.close_Button.Location = new System.Drawing.Point(305, 105);
+            this.close_Button.Name = "close_Button";
+            this.close_Button.Size = new System.Drawing.Size(134, 23);
+            this.close_Button.TabIndex = 40;
+            this.close_Button.Text = "Close";
+            this.close_Button.UseVisualStyleBackColor = true;
+            this.close_Button.Click += new System.EventHandler(this.close_Button_Click);
+            // 
             // edit_employee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 299);
+            this.ClientSize = new System.Drawing.Size(1147, 368);
+            this.Controls.Add(this.close_Button);
+            this.Controls.Add(this.save_button);
             this.Controls.Add(this.out_label);
             this.Controls.Add(this.in_label);
             this.Controls.Add(this.saturday_label);
@@ -314,15 +367,17 @@ namespace Final_Capstone_try
             this.Controls.Add(this.thursdayOUTedit_textbox);
             this.Controls.Add(this.thursdayINedit_textbox);
             this.Controls.Add(this.wednesdayOUTedit_textbox);
-            this.Controls.Add(this.textBox6wednesdayedit_textbox);
+            this.Controls.Add(this.wednesdayedit_textbox);
             this.Controls.Add(this.tuesdayOUTedit_textbox);
             this.Controls.Add(this.tuesdayINedit_textbox);
             this.Controls.Add(this.mondayOUTedit_textbox);
             this.Controls.Add(this.mondayINedit_textbox);
             this.Controls.Add(this.sundayOUTedit_textbox);
             this.Controls.Add(this.sundayINedit_textbox);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "edit_employee";
-            this.Text = "Form1";
+            this.Text = "Edit Employee";
+            this.Load += new System.EventHandler(this.edit_employee_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,23 +385,23 @@ namespace Final_Capstone_try
 
         #endregion
 
-        private System.Windows.Forms.TextBox sundayINedit_textbox;
-        private System.Windows.Forms.TextBox sundayOUTedit_textbox;
-        private System.Windows.Forms.TextBox mondayOUTedit_textbox;
-        private System.Windows.Forms.TextBox mondayINedit_textbox;
-        private System.Windows.Forms.TextBox wednesdayOUTedit_textbox;
-        private System.Windows.Forms.TextBox textBox6wednesdayedit_textbox;
-        private System.Windows.Forms.TextBox tuesdayOUTedit_textbox;
-        private System.Windows.Forms.TextBox tuesdayINedit_textbox;
-        private System.Windows.Forms.TextBox fridayOUTedit_textbox;
-        private System.Windows.Forms.TextBox fridayINedit_textbox;
-        private System.Windows.Forms.TextBox thursdayOUTedit_textbox;
-        private System.Windows.Forms.TextBox thursdayINedit_textbox;
-        private System.Windows.Forms.TextBox saturdayOUTedit_textbox;
-        private System.Windows.Forms.TextBox satudayINedit_textbox;
-        private System.Windows.Forms.TextBox firstnameedit_textbox;
-        private System.Windows.Forms.TextBox EINedit_textbox;
-        private System.Windows.Forms.TextBox lastnameedit_textbox;
+        public System.Windows.Forms.TextBox sundayINedit_textbox;
+        public System.Windows.Forms.TextBox sundayOUTedit_textbox;
+        public System.Windows.Forms.TextBox mondayOUTedit_textbox;
+        public System.Windows.Forms.TextBox mondayINedit_textbox;
+        public System.Windows.Forms.TextBox wednesdayOUTedit_textbox;
+        public System.Windows.Forms.TextBox wednesdayedit_textbox;
+        public System.Windows.Forms.TextBox tuesdayOUTedit_textbox;
+        public System.Windows.Forms.TextBox tuesdayINedit_textbox;
+        public System.Windows.Forms.TextBox fridayOUTedit_textbox;
+        public System.Windows.Forms.TextBox fridayINedit_textbox;
+        public System.Windows.Forms.TextBox thursdayOUTedit_textbox;
+        public System.Windows.Forms.TextBox thursdayINedit_textbox;
+        public System.Windows.Forms.TextBox saturdayOUTedit_textbox;
+        public System.Windows.Forms.TextBox satudayINedit_textbox;
+        public System.Windows.Forms.TextBox firstnameedit_textbox;
+        public System.Windows.Forms.TextBox EINedit_textbox;
+        public System.Windows.Forms.TextBox lastnameedit_textbox;
         private System.Windows.Forms.Label lastname_label;
         private System.Windows.Forms.Label firstname_label;
         private System.Windows.Forms.Label ein_label;
@@ -359,5 +414,7 @@ namespace Final_Capstone_try
         private System.Windows.Forms.Label sunday_label;
         private System.Windows.Forms.Label out_label;
         private System.Windows.Forms.Label in_label;
+        private System.Windows.Forms.Button save_button;
+        private System.Windows.Forms.Button close_Button;
     }
 }

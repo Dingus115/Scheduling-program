@@ -13,68 +13,22 @@ namespace Final_Capstone_try
 {
     public partial class cookout_editor : Form
     {
+        //state connection string
         public static MySqlConnection connection = new MySqlConnection(@"server=cookout.cqow78y7vcx8.us-east-2.rds.amazonaws.com;database=cookout_data;userid=admin;password=1241273Aws");
+        
+        //create command object
         MySqlCommand command;
-        MySqlDataReader reader;
-        MySqlDataAdapter adapter;
+
+        //select all querry string
         public static string selectAll = "Select EIN, FirstName, LastName, SundayIN, SundayOUT, MondayIN, MondayOUT, TuesdayIN, TuesdayOUT, WednesdayIN, WednesdayOUT, ThursdayIN, ThursdayOUT, FridayIN, FridayOUT, SaturdayIN, SaturdayOUT FROM employee ORDER BY LastName, FirstName";
+        
+        //create datatable
         public DataTable dtcookout = new DataTable(); //create datatable to pass to database and allow search function
+        
         public int index;
         public cookout_editor()
         {
             InitializeComponent();
-        }
-
-        private void connection_check_button_Click(object sender, EventArgs e)
-        {
-            //check internet connection to database
-            connection.Open();
-            string state = connection.State.ToString();
-            string title = "connection state";
-            MessageBox.Show(state, title);
-            connection.Close();
-        }
-
-        private void refresh_button_Click(object sender, EventArgs e)
-        {
-            //Open connection and querry database for items
-            connection.Open();
-            command = new MySqlCommand(selectAll, connection);
-            dtcookout.Load(command.ExecuteReader()); //Load database into table through reader
-
-            //close all connections and dispose
-            connection.Close();
-            command.Dispose();
-            connection.Dispose();
-
-            //Create custom settings for datagrid view
-            cookout_datagridview.DataSource = dtcookout;
-            cookout_datagridview.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            cookout_datagridview.ReadOnly = true;
-            cookout_datagridview.RowHeadersVisible = false;
-            cookout_datagridview.AllowUserToAddRows = false;
-        }
-
-        private void cookout_datagridview_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //employee information passed to text boxes for editing from clicking on specific cells
-            EIN_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["EIN"].ToString();
-            firstname_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["FirstName"].ToString();
-            lastname_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["LastName"].ToString();
-            sundayin_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["SundayIN"].ToString();
-            sundayout_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["SundayOUT"].ToString();
-            mondayin_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["MondayIN"].ToString();
-            mondayout_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["MondayOUT"].ToString();
-            tuesdayin_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["TuesdayIN"].ToString();
-            tuesdayout_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["TuesdayOUT"].ToString();
-            wednesdayin_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["WednesdayIN"].ToString();
-            wednesdayout_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["WednesdayOUT"].ToString();
-            thursdayin_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["ThursdayIN"].ToString();
-            thursdayout_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["ThursdayOUT"].ToString();
-            fridayin_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["FridayIN"].ToString();
-            fridayout_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["FridayOUT"].ToString();
-            saturdayin_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["SaturdayIN"].ToString();
-            saturdayout_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["SaturdayOUT"].ToString();
         }
 
         private void cookout_editor_Load(object sender, EventArgs e)
@@ -97,6 +51,44 @@ namespace Final_Capstone_try
             cookout_datagridview.AllowUserToAddRows = false;
             theme_combobox.Items.Add("Dark");
             theme_combobox.Items.Add("Light");
+        }
+
+        private void connection_check_button_Click(object sender, EventArgs e)
+        {
+            //check internet connection to database
+            connection.Open();
+            string state = connection.State.ToString();
+            string title = "connection state";
+            MessageBox.Show(state, title);
+            connection.Close();
+        }
+
+        private void refresh_button_Click(object sender, EventArgs e)
+        {
+            //Call refresh
+            dbRefresh();
+        }
+
+        private void cookout_datagridview_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //employee information passed to text boxes for editing from clicking on specific cells
+            EIN_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["EIN"].ToString();
+            firstname_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["FirstName"].ToString();
+            lastname_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["LastName"].ToString();
+            sundayin_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["SundayIN"].ToString();
+            sundayout_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["SundayOUT"].ToString();
+            mondayin_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["MondayIN"].ToString();
+            mondayout_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["MondayOUT"].ToString();
+            tuesdayin_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["TuesdayIN"].ToString();
+            tuesdayout_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["TuesdayOUT"].ToString();
+            wednesdayin_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["WednesdayIN"].ToString();
+            wednesdayout_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["WednesdayOUT"].ToString();
+            thursdayin_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["ThursdayIN"].ToString();
+            thursdayout_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["ThursdayOUT"].ToString();
+            fridayin_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["FridayIN"].ToString();
+            fridayout_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["FridayOUT"].ToString();
+            saturdayin_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["SaturdayIN"].ToString();
+            saturdayout_textbox.Text = dtcookout.Rows[cookout_datagridview.CurrentRow.Index]["SaturdayOUT"].ToString();
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -275,6 +267,58 @@ namespace Final_Capstone_try
 
         private void edit_button_Click(object sender, EventArgs e)
         {
+            //create new form
+            var frmEditEmployee = new edit_employee();
+
+            //pass all text box information to edit form text boxes (can be done with class but no time and easier)
+            DataRow dtrow = dtcookout.Rows[cookout_datagridview.CurrentRow.Index];
+            frmEditEmployee.firstnameedit_textbox.Text = dtrow["FirstName"].ToString();
+            frmEditEmployee.lastnameedit_textbox.Text = dtrow["LastName"].ToString();
+            frmEditEmployee.EINedit_textbox.Text = dtrow["EIN"].ToString();
+            frmEditEmployee.sundayINedit_textbox.Text = dtrow["SundayIN"].ToString();
+            frmEditEmployee.sundayOUTedit_textbox.Text = dtrow["SundayOUT"].ToString();
+            frmEditEmployee.mondayINedit_textbox.Text = dtrow["MondayIN"].ToString();
+            frmEditEmployee.mondayOUTedit_textbox.Text = dtrow["MondayOUT"].ToString();
+            frmEditEmployee.tuesdayINedit_textbox.Text = dtrow["TuesdayIN"].ToString();
+            frmEditEmployee.tuesdayOUTedit_textbox.Text = dtrow["TuesdayOUT"].ToString();
+            frmEditEmployee.wednesdayedit_textbox.Text = dtrow["WednesdayIN"].ToString();
+            frmEditEmployee.wednesdayOUTedit_textbox.Text = dtrow["WednesdayOUT"].ToString();
+            frmEditEmployee.thursdayINedit_textbox.Text = dtrow["ThursdayIN"].ToString();
+            frmEditEmployee.thursdayOUTedit_textbox.Text = dtrow["ThursdayOUT"].ToString();
+            frmEditEmployee.fridayINedit_textbox.Text = dtrow["FridayIN"].ToString();
+            frmEditEmployee.fridayOUTedit_textbox.Text = dtrow["FridayOUT"].ToString();
+            frmEditEmployee.satudayINedit_textbox.Text = dtrow["SaturdayIN"].ToString();
+            frmEditEmployee.saturdayOUTedit_textbox.Text = dtrow["SaturdayOUT"].ToString();
+
+            //show form
+            frmEditEmployee.Show();
+            dbRefresh();
+        }
+
+        public void dbRefresh()
+        {
+            //Open connection and querry database for items
+            connection.Open();
+            command = new MySqlCommand(selectAll, connection);
+            dtcookout.Load(command.ExecuteReader()); //Load database into table through reader
+
+            //close all connections and dispose
+            connection.Close();
+            command.Dispose();
+            connection.Dispose();
+
+            //Create custom settings for datagrid view
+            cookout_datagridview.DataSource = dtcookout;
+            cookout_datagridview.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            cookout_datagridview.ReadOnly = true;
+            cookout_datagridview.RowHeadersVisible = false;
+            cookout_datagridview.AllowUserToAddRows = false;
+        }
+
+        private void newEmployee_button_Click(object sender, EventArgs e)
+        {
+            cookout_datagridview.Rows[0].Selected = true;
+            cookout_datagridview.Rows[0].Selected = false;
         }
     }
 }
