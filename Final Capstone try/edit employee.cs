@@ -24,6 +24,7 @@ namespace Final_Capstone_try
 
         private void edit_employee_Load(object sender, EventArgs e)
         {
+            //select theme on load
             if (theme == "Dark")
             {
                 this.BackColor = Color.FromArgb(41, 42, 43);
@@ -86,12 +87,69 @@ namespace Final_Capstone_try
             }
             else
             {
+                this.BackColor = Color.FromArgb(220, 222, 224);
+                in_label.ForeColor = Color.Black;
+                out_label.ForeColor = Color.Black;
 
+                sunday_label.ForeColor = Color.Black;
+                sundayINedit_textbox.BackColor = Color.White;
+                sundayINedit_textbox.ForeColor = Color.Black;
+                sundayOUTedit_textbox.BackColor = Color.White;
+                sundayOUTedit_textbox.ForeColor = Color.Black;
+
+                monday_label.ForeColor = Color.Black;
+                mondayINedit_textbox.BackColor = Color.White;
+                mondayINedit_textbox.ForeColor = Color.Black;
+                mondayOUTedit_textbox.BackColor = Color.White;
+                mondayOUTedit_textbox.ForeColor = Color.Black;
+
+                tuesday_label.ForeColor = Color.Black;
+                tuesdayINedit_textbox.BackColor = Color.White;
+                tuesdayINedit_textbox.ForeColor = Color.Black;
+                tuesdayOUTedit_textbox.BackColor = Color.White;
+                tuesdayOUTedit_textbox.ForeColor = Color.Black;
+
+                wednesday_label.ForeColor = Color.Black;
+                wednesdayedit_textbox.BackColor = Color.White;
+                wednesdayedit_textbox.ForeColor = Color.Black;
+                wednesdayOUTedit_textbox.BackColor = Color.White;
+                wednesdayOUTedit_textbox.ForeColor = Color.Black;
+
+                thursday_label.ForeColor = Color.Black;
+                thursdayINedit_textbox.BackColor = Color.White;
+                thursdayINedit_textbox.ForeColor = Color.Black;
+                thursdayOUTedit_textbox.BackColor = Color.White;
+                thursdayOUTedit_textbox.ForeColor = Color.Black;
+
+                friday_label.ForeColor = Color.Black;
+                fridayINedit_textbox.BackColor = Color.White;
+                fridayINedit_textbox.ForeColor = Color.Black;
+                fridayOUTedit_textbox.BackColor = Color.White;
+                fridayOUTedit_textbox.ForeColor = Color.Black;
+
+                saturday_label.ForeColor = Color.Black;
+                satudayINedit_textbox.BackColor = Color.White;
+                satudayINedit_textbox.ForeColor = Color.Black;
+                saturdayOUTedit_textbox.BackColor = Color.White;
+                saturdayOUTedit_textbox.ForeColor = Color.Black;
+
+                ein_label.ForeColor = Color.Black;
+                EINedit_textbox.BackColor = Color.White;
+                EINedit_textbox.ForeColor = Color.White;
+
+                firstname_label.ForeColor = Color.Black;
+                firstnameedit_textbox.BackColor = Color.White;
+                firstnameedit_textbox.ForeColor = Color.Black;
+
+                lastname_label.ForeColor = Color.Black;
+                lastnameedit_textbox.BackColor = Color.White;
+                lastnameedit_textbox.ForeColor = Color.Black;
             }
         }
 
         private void save_button_Click(object sender, EventArgs e)
         {
+            //create strings to grab textbox information
             string EIN, FirstName, LastName, SundayIN, SundayOUT,
                 MondayIN, MondayOUT, TuesdayIN, TuesdayOUT, WednesdayIN, WednesdayOUT,
                 ThursdayIN, ThursdayOUT, FridayIN, FridayOUT, SaturdayIN, SaturdayOUT;
@@ -114,22 +172,22 @@ namespace Final_Capstone_try
             SaturdayIN = satudayINedit_textbox.Text;
             SaturdayOUT = saturdayOUTedit_textbox.Text;
 
-
+            //open and check connection state
             cnEmployee.Open();
             if(cnEmployee.State == ConnectionState.Open)
             {
+                //create command text to edit current record
               string commandText = "UPDATE employee  SET FirstName = '" + FirstName + "', LastName = '" + LastName + "', SundayIN = '" + SundayIN + "', SundayOUT = '" + SundayOUT + "', MondayIN = '" + MondayIN + "', MondayOUT = '" + MondayOUT + "', " +
                 "TuesdayIN = '" + TuesdayIN + "', TuesdayOUT = '" + TuesdayOUT + "', WednesdayIN = '" + WednesdayIN + "', WednesdayOUT = '" + WednesdayOUT + "'," +
                 " ThursdayIN = '" + ThursdayIN + "', ThursdayOUT = '" + ThursdayOUT + "', FridayIN = '" + FridayIN + "', FridayOUT = '" + FridayOUT + "', " +
                 "SaturdayIN = '" + SaturdayIN + "', SaturdayOUT = '" + SaturdayOUT + "' WHERE EIN = '" + EIN + "'";
                 cmdEmployee.CommandText = commandText;
-                
                 cmdEmployee.ExecuteNonQuery();
                 MessageBox.Show("Saved Succesfully");
             }
             else
             {
-                MessageBox.Show("Error during Save");
+                MessageBox.Show("Error during Save. Could not connect to database!");
             }
             
             cnEmployee.Close();

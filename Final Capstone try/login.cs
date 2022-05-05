@@ -47,7 +47,7 @@ namespace Final_Capstone_try
             //error box for invalid credentials
             else
             {
-                string message = "Password was incorrect";
+                string message = "Password or Login was incorrect";
                 string title = "Login";
                 MessageBox.Show(message, title);
                 con.Close();
