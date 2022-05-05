@@ -318,11 +318,13 @@ namespace Final_Capstone_try
         private void newEmployee_button_Click(object sender, EventArgs e)
         {
             connection.Open();
-            string insert = "INSERT INTO employee () values()";
+            string insert = "INSERT INTO `cookout_data`.`employee` (`EIN`) VALUES('NEW ')";
             command.CommandText = insert;
             command.ExecuteNonQuery();
             connection.Close();
             connection.Dispose();
+
+            dbRefresh();
         }
     }
 }
