@@ -15,14 +15,79 @@ namespace Final_Capstone_try
     {
         MySqlCommand cmdEmployee = new MySqlCommand("", cnEmployee);
         public static MySqlConnection cnEmployee = new MySqlConnection(@"server=cookout.cqow78y7vcx8.us-east-2.rds.amazonaws.com;database=cookout_data;userid=admin;password=1241273Aws");
-        public edit_employee()
+        string theme;
+        public edit_employee(string temp)
         {
             InitializeComponent();
+            theme = temp;
         }
 
         private void edit_employee_Load(object sender, EventArgs e)
         {
+            if (theme == "Dark")
+            {
+                this.BackColor = Color.FromArgb(41, 42, 43);
+                in_label.ForeColor = Color.White;
+                out_label.ForeColor = Color.White;
 
+                sunday_label.ForeColor = Color.White;
+                sundayINedit_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                sundayINedit_textbox.ForeColor = Color.White;
+                sundayOUTedit_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                sundayOUTedit_textbox.ForeColor = Color.White;
+
+                monday_label.ForeColor = Color.White;
+                mondayINedit_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                mondayINedit_textbox.ForeColor = Color.White;
+                mondayOUTedit_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                mondayOUTedit_textbox.ForeColor = Color.White;
+
+                tuesday_label.ForeColor = Color.White;
+                tuesdayINedit_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                tuesdayINedit_textbox.ForeColor = Color.White;
+                tuesdayOUTedit_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                tuesdayOUTedit_textbox.ForeColor = Color.White;
+
+                wednesday_label.ForeColor = Color.White;
+                wednesdayedit_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                wednesdayedit_textbox.ForeColor = Color.White;
+                wednesdayOUTedit_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                wednesdayOUTedit_textbox.ForeColor = Color.White;
+
+                thursday_label.ForeColor = Color.White;
+                thursdayINedit_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                thursdayINedit_textbox.ForeColor = Color.White;
+                thursdayOUTedit_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                thursdayOUTedit_textbox.ForeColor = Color.White;
+
+                friday_label.ForeColor = Color.White;
+                fridayINedit_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                fridayINedit_textbox.ForeColor = Color.White;
+                fridayOUTedit_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                fridayOUTedit_textbox.ForeColor = Color.White;
+
+                saturday_label.ForeColor = Color.White;
+                satudayINedit_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                satudayINedit_textbox.ForeColor = Color.White;
+                saturdayOUTedit_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                saturdayOUTedit_textbox.ForeColor = Color.White;
+
+                ein_label.ForeColor = Color.White;
+                EINedit_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                EINedit_textbox.ForeColor = Color.White;
+
+                firstname_label.ForeColor = Color.White;
+                firstnameedit_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                firstnameedit_textbox.ForeColor = Color.White;
+
+                lastname_label.ForeColor = Color.White;
+                lastnameedit_textbox.BackColor = Color.FromArgb(163, 163, 163);
+                lastnameedit_textbox.ForeColor = Color.White;
+            }
+            else
+            {
+
+            }
         }
 
         private void save_button_Click(object sender, EventArgs e)

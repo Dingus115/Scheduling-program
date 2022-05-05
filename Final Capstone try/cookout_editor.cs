@@ -24,8 +24,8 @@ namespace Final_Capstone_try
         
         //create datatable
         public DataTable dtcookout = new DataTable(); //create datatable to pass to database and allow search function
-        
         public int index;
+        public string theme;
         public cookout_editor()
         {
             InitializeComponent();
@@ -109,8 +109,7 @@ namespace Final_Capstone_try
 
         private void theme_button_Click(object sender, EventArgs e)
         {
-            string theme = theme_combobox.Text.ToString();
-
+            theme = theme_combobox.Text.ToString();
             if(theme == "Dark")
             {
                 this.BackColor = Color.FromArgb(41, 42, 43);
@@ -268,7 +267,7 @@ namespace Final_Capstone_try
         private void edit_button_Click(object sender, EventArgs e)
         {
             //create new form
-            var frmEditEmployee = new edit_employee();
+            var frmEditEmployee = new edit_employee(theme);
 
             //pass all text box information to edit form text boxes (can be done with class but no time and easier)
             DataRow dtrow = dtcookout.Rows[cookout_datagridview.CurrentRow.Index];
@@ -308,6 +307,7 @@ namespace Final_Capstone_try
             connection.Dispose();
 
             //Create custom settings for datagrid view
+            cookout_datagridview.DataSource = null;
             cookout_datagridview.DataSource = dtcookout;
             cookout_datagridview.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             cookout_datagridview.ReadOnly = true;
@@ -317,13 +317,61 @@ namespace Final_Capstone_try
 
         private void newEmployee_button_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            string insert = "INSERT INTO `cookout_data`.`employee` (`EIN`) VALUES('NEW ')";
-            command.CommandText = insert;
-            command.ExecuteNonQuery();
-            connection.Close();
-            connection.Dispose();
+            //Create new form to add employee
+            var frmNewEmployee = new newEmployee(theme);
+            frmNewEmployee.Show();
+        }
 
+        private void deleteEmployee_button_Click(object sender, EventArgs e)
+        {
+            //create string variables to retrieve text box information
+            string firstName, lastName, ein;
+            firstName = firstname_textbox.Text;
+            lastName = lastname_textbox.Text;
+            ein = EIN_textbox.Text;
+
+            //create mySQL delete statement and set command text
+            string deleteEmployee = "DELETE FROM `cookout_data`.`employee` WHERE (`EIN` = '" + ein + "')";
+            command.CommandText = deleteEmployee;
+
+            //open connection and test
+            connection.Open();
+            if(connection.State == ConnectionState.Open)
+            {
+                //ask user if they are sure
+                DialogResult result = MessageBox.Show("Are you sure you would like to delete: '" + firstName + " " + lastName +"'", "Delete Employee", MessageBoxButtons.YesNo);
+                
+                //if yes then delete
+                if(result == DialogResult.Yes)
+                {
+                    //delete record from mySQL server
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Employee deleted Succesfully.", "Result", MessageBoxButtons.OK);
+                    connection.Close();
+                    connection.Dispose();
+
+                    //delete record from datatable that is casted to datagridview
+                    for(int i = 0; i < dtcookout.Rows.Count; i++)
+                    {
+                        DataRow dr = dtcookout.Rows[i];
+                        if (dr["EIN"].ToString() == ein)
+                        {
+                            dr.Delete();
+                        }
+                    }
+                    dtcookout.AcceptChanges();
+                }
+
+                //cancel deletion record
+                else
+                {
+                    MessageBox.Show("Task Aborted", "Result", MessageBoxButtons.OK);
+                    connection.Close();
+                    connection.Dispose();
+                }
+            }
+
+            //refresh datatable from SQL server
             dbRefresh();
         }
     }

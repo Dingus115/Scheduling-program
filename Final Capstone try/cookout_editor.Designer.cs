@@ -70,6 +70,7 @@ namespace Final_Capstone_try
             this.theme_combobox = new System.Windows.Forms.ComboBox();
             this.edit_button = new System.Windows.Forms.Button();
             this.newEmployee_button = new System.Windows.Forms.Button();
+            this.deleteEmployee_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.cookout_datagridview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,7 +98,7 @@ namespace Final_Capstone_try
             // 
             // refresh_button
             // 
-            this.refresh_button.Location = new System.Drawing.Point(16, 343);
+            this.refresh_button.Location = new System.Drawing.Point(248, 342);
             this.refresh_button.Margin = new System.Windows.Forms.Padding(4);
             this.refresh_button.Name = "refresh_button";
             this.refresh_button.Size = new System.Drawing.Size(100, 28);
@@ -393,7 +394,7 @@ namespace Final_Capstone_try
             // 
             // up_button
             // 
-            this.up_button.Location = new System.Drawing.Point(140, 343);
+            this.up_button.Location = new System.Drawing.Point(12, 341);
             this.up_button.Margin = new System.Windows.Forms.Padding(4);
             this.up_button.Name = "up_button";
             this.up_button.Size = new System.Drawing.Size(100, 28);
@@ -404,7 +405,7 @@ namespace Final_Capstone_try
             // 
             // down_button
             // 
-            this.down_button.Location = new System.Drawing.Point(248, 343);
+            this.down_button.Location = new System.Drawing.Point(120, 341);
             this.down_button.Margin = new System.Windows.Forms.Padding(4);
             this.down_button.Name = "down_button";
             this.down_button.Size = new System.Drawing.Size(100, 28);
@@ -454,12 +455,23 @@ namespace Final_Capstone_try
             this.newEmployee_button.UseVisualStyleBackColor = true;
             this.newEmployee_button.Click += new System.EventHandler(this.newEmployee_button_Click);
             // 
+            // deleteEmployee_button
+            // 
+            this.deleteEmployee_button.Location = new System.Drawing.Point(461, 343);
+            this.deleteEmployee_button.Name = "deleteEmployee_button";
+            this.deleteEmployee_button.Size = new System.Drawing.Size(88, 26);
+            this.deleteEmployee_button.TabIndex = 41;
+            this.deleteEmployee_button.Text = "Delete";
+            this.deleteEmployee_button.UseVisualStyleBackColor = true;
+            this.deleteEmployee_button.Click += new System.EventHandler(this.deleteEmployee_button_Click);
+            // 
             // cookout_editor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1924, 1029);
+            this.Controls.Add(this.deleteEmployee_button);
             this.Controls.Add(this.newEmployee_button);
             this.Controls.Add(this.edit_button);
             this.Controls.Add(this.theme_combobox);
@@ -551,8 +563,9 @@ namespace Final_Capstone_try
         private System.Windows.Forms.Button up_button;
         private System.Windows.Forms.Button down_button;
         private System.Windows.Forms.Button theme_button;
-        private System.Windows.Forms.ComboBox theme_combobox;
+        public System.Windows.Forms.ComboBox theme_combobox;
         private System.Windows.Forms.Button edit_button;
         private System.Windows.Forms.Button newEmployee_button;
+        private System.Windows.Forms.Button deleteEmployee_button;
     }
 }
