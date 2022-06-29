@@ -268,7 +268,6 @@ namespace Final_Capstone_try
         {
             //create new form
             var frmEditEmployee = new edit_employee(theme);
-            //this is stupid
             //pass all text box information to edit form text boxes (can be done with class but no time and easier)
             DataRow dtrow = dtcookout.Rows[cookout_datagridview.CurrentRow.Index];
             frmEditEmployee.firstnameedit_textbox.Text = dtrow["FirstName"].ToString();
